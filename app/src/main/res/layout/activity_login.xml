@@ -1,34 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.framgia.e_learningsimple.LoginActivity">
+    android:fadeScrollbars="false"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
 
-    <android.support.design.widget.AppBarLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:background="@color/actionbar"
+        android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_linear">
 
-    </android.support.design.widget.AppBarLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="@string/title_login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textview_textsize" />
 
-    <include layout="@layout/content_login" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/padding_top">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+                <ImageView
+                    android:layout_width="@dimen/layout_width"
+                    android:layout_height="@dimen/layout_height"
+                    android:src="@mipmap/ic_email" />
 
-</android.support.design.widget.CoordinatorLayout>
+                <TextView
+                    android:id="@+id/text_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_left"
+                    android:text="@string/email" />
+
+                <EditText
+                    android:id="@+id/edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_email"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="@dimen/margin_top_edit_text"
+                    android:background="@color/white"
+                    android:hint="@string/hint_email_input"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/padding" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/layout_width"
+                    android:layout_height="@dimen/layout_height"
+                    android:src="@mipmap/ic_password" />
+
+                <TextView
+                    android:id="@+id/text_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_left"
+                    android:text="@string/pass" />
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_password"
+                    android:layout_marginBottom="@dimen/margin_bottom"
+                    android:layout_marginTop="@dimen/margin_top_edit_text"
+                    android:background="@color/white"
+                    android:hint="@string/hint_password_input"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/padding" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:background="@drawable/button_selector"
+                android:paddingLeft="@dimen/padding_left"
+                android:paddingRight="@dimen/padding_right"
+                android:text="@string/label_login"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/text_link_to_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_textview"
+                android:text="@string/label_link_register"
+                android:textColor="@color/blue"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>
