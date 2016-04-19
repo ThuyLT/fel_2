@@ -3,9 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="bg_btn_login_unpressed">#1e6258</color>
-    <color name="bg_btn_login_pressed">#1c786a</color>
+    <color name="bg_btn_login_unpressed">#3bf408</color>
+    <color name="bg_btn_login_pressed">#3bf408</color>
     <color name="actionbar">#e49e11</color>
     <color name="white">#ffffff</color>
     <color name="blue">#0b32f2</color>
+    <color name="header">#3bf408</color>
+    <color name="bg_blue">#f5f504</color>
 </resources>
