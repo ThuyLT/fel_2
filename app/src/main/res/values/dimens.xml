@@ -30,4 +30,8 @@
     <dimen name="layout_marginLeft">30dp</dimen>
     <dimen name="layout_marginRight">30dp</dimen>
     <dimen name="layout_height_text">50dp</dimen>
+    <dimen name="layout_width_button">60dp</dimen>
+    <dimen name="layout_height_button">35dp</dimen>
+    <dimen name="layout_width_image_avt">100dp</dimen>
+    <dimen name="layout_height_image_avt">100dp</dimen>
 </resources>
