@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">E_LearningSimple</string>
     <string name="action_settings">Settings</string>
+    <string name="title_login">Login</string>
+    <string name="hint_email_input">Email</string>
+    <string name="hint_password_input">Password</string>
+    <string name="label_login">Login</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="label_link_register"><u>Create new account</u></string>
 </resources>
