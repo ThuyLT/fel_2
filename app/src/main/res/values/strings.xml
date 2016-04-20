@@ -4,12 +4,20 @@
     <string name="title_login">Login</string>
     <string name="hint_email_input">Email</string>
     <string name="hint_password_input">Password</string>
+    <string name="hint_password_confirm">Password confirmation</string>
     <string name="label_login">Login</string>
     <string name="email">Email</string>
     <string name="pass">Password</string>
+    <string name="fullname">Full name</string>
+    <string name="avatar">Avatar</string>
+    <string name="hint_fullname">Full name</string>
+    <string name="pass_confirm">Password Confirmation</string>
     <string name="label_link_register"><u>Create new account</u></string>
     <string name="label_words">Words</string>
     <string name="label_profile">PROFILE</string>
     <string name="description_ur_avatar">User\'s avatar</string>
     <string name="label_lessons">Lessons</string>
+    <string name="app_full_name">Register</string>
+    <string name="label_update">UD</string>
+
 </resources>
