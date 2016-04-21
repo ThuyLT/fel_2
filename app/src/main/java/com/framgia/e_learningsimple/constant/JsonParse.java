@@ -1,0 +1,36 @@
+package com.framgia.e_learningsimple.constant;
+
+import android.os.Environment;
+
+/**
+ * Created by ThuyIT on 20/04/2016.
+ */
+public class JsonParse {
+    public static final String USER_SHARED_PREF = "USER_INFO";
+    public static final String NAME_FIELD = "name";
+    public static final String EMAIL_FILED = "email";
+    public static final String AUTHO_TOKEN_FIELD = "auth_token";
+    public static final String KEY_USER_ID = "userId";
+    public static final String KEY_USER_PASSWORD = "userPassword";
+
+    public static final String DEFAULT_LESSON_NAME = "Training Project";
+    public static final String KEY_LESSON_ID = "lessonId";
+    public static final String KEY_WORDS_DATA = "wordsData";
+    public static final String KEY_CATEGORY_NAME = "categoryName";
+    public static final String KEY_CATEGORY_ID = "categoryId";
+    public static final String KEY_USER_ANSWERS = "userAnwsersData";
+
+    public static final String KEY_LESSON_NAME = "lessonName";
+    public static final String KEY_CATEGORY_LIST = "categoryList";
+
+    public static final String KEY_ALL_WORD = "all_word";
+    public static final String KEY_LEARNED = "learned";
+    public static final String KEY_NOT_LEARNED = "no_learn";
+    public static final String DEFAULT_WORDLIST_FILE_NAME = "wordlist";
+    public static final String DEFAULT_FILE_SAVED_PATH = Environment
+            .getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();;
+    public static final String SCORE_FORMAT = "%s/%s";
+
+    public static final String KEY_USER_AVATAR_URL = "userAvatarUrl";
+    public static final String KEY_ACTIVITIES = "activities";
+}
