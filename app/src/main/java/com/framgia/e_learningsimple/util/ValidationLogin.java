@@ -12,14 +12,21 @@ import java.util.regex.Pattern;
 /**
  * Created by ThuyIT on 20/04/2016.
  */
-public class CheckLogin {
+public class ValidationLogin {
     public static int NAME_MIN_LENGTH = 3;
 
-    public boolean isValidEmail(CharSequence target) {
-        if (target == null) {
+    public boolean isValidEmail(EditText editTextEmail) {
+        CharSequence target = editTextEmail.getText().toString();
+        if (TextUtils.isEmpty(target)) {
+            editTextEmail.setError(mContext.getString(R.string.error_email_blank));
             return false;
         } else {
-            return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+            if (android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches()) {
+                return true;
+            } else {
+                editTextEmail.setError(mContext.getString(R.string.error_email_invalid));
+                return false;
+            }
         }
     }
 
@@ -27,11 +34,11 @@ public class CheckLogin {
 
     private Context mContext;
 
-    public CheckLogin(Context mContext) {
+    public ValidationLogin(Context mContext) {
         this.mContext = mContext;
     }
 
-    public boolean validateName(EditText editTextName) {
+    public boolean isValidName(EditText editTextName) {
         boolean isValid = false;
         String name = editTextName.getText().toString();
         if (TextUtils.isEmpty(name)) {
@@ -57,23 +64,17 @@ public class CheckLogin {
         return isValid;
     }
 
-    public boolean validatePassword(EditText editTextPasssword, EditText editTextRePasssword) {
+    public boolean isValidRePassword(EditText editTextPasssword, EditText editTextRePasssword) {
         boolean isValid = false;
         String password = editTextPasssword.getText().toString();
         String passwordConfirmation = editTextRePasssword.getText().toString();
         if (!password.equals(passwordConfirmation)) {
             editTextPasssword.setError(mContext.getString(R.string.error_repassword_not_match));
         } else if (password.length() < PASSWORD_MIN_LENGTH) {
-            editTextPasssword.setError(mContext.getString(R.string.error_password_short));
+            editTextPasssword.setError(mContext.getString(R.string.error_repassword_blank));
         } else {
             isValid = true;
         }
         return isValid;
-    }
-
-    public static boolean isValidPattern(String email, String patternStr) {
-        Pattern pattern = Pattern.compile(patternStr, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
     }
 }

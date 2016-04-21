@@ -22,5 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.RegisterActivity" android:screenOrientation="portrait" >
+        </activity>
     </application>
 </manifest>
