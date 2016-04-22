@@ -1,4 +1,4 @@
-package com.framgia.e_learningsimple.network;
+package com.framgia.e_learningsimple.util;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,7 +12,7 @@ import com.framgia.e_learningsimple.R;
 /**
  * Created by ThuyIT on 20/04/2016.
  */
-public class CheckNetwork {
+public class NetworkUtil {
     public static boolean isInternetConnected(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -5,7 +5,7 @@ import android.os.Environment;
 /**
  * Created by ThuyIT on 20/04/2016.
  */
-public class JsonParse {
+public class JsonKeyConstant {
     public static final String USER_SHARED_PREF = "USER_INFO";
     public static final String NAME_FIELD = "name";
     public static final String EMAIL_FILED = "email";

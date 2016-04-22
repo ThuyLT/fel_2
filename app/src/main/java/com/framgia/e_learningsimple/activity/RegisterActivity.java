@@ -13,14 +13,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.framgia.e_learningsimple.R;
-import com.framgia.e_learningsimple.util.NetworkUtil;
-import com.framgia.e_learningsimple.util.ValidationLogin;
 import com.framgia.e_learningsimple.constant.JsonKeyConstant;
 import com.framgia.e_learningsimple.util.LoginAsyncTask;
+import com.framgia.e_learningsimple.util.NetworkUtil;
+import com.framgia.e_learningsimple.util.RegisterAsynctask;
+import com.framgia.e_learningsimple.util.ValidationLogin;
 
-public class LoginActivity extends Activity {
-    EditText mEditTextEmail;
-    EditText mEditTextPassword;
+/**
+ * Created by ThuyIT on 21/04/2016.
+ */
+public class RegisterActivity extends Activity {
+    EditText mEditTextName, mEditTextEmail, mEditTextPassword, mEditTextRePassword;
+    Button mButtonCancel, mButtonDone;
     private SharedPreferences mSharedPreferences;
 
     @Override
@@ -28,45 +32,46 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         mSharedPreferences = getSharedPreferences(JsonKeyConstant.USER_SHARED_PREF, Context.MODE_PRIVATE);
         if (TextUtils.isEmpty(mSharedPreferences.getString(JsonKeyConstant.AUTHO_TOKEN_FIELD, null))) {
-            setContentView(R.layout.activity_login);
-            Button button_Login = (Button) findViewById(R.id.btn_login);
+            setContentView(R.layout.activity_register);
             mEditTextEmail = (EditText) findViewById(R.id.edit_email);
             mEditTextPassword = (EditText) findViewById(R.id.edit_password);
-
-            button_Login.setOnClickListener(new View.OnClickListener() {
+            mEditTextRePassword = (EditText) findViewById(R.id.edit_password_confirm);
+            mEditTextName = (EditText) findViewById(R.id.edit_fullname);
+            mButtonCancel = (Button) findViewById(R.id.button_cancel);
+            mButtonDone = (Button) findViewById(R.id.button_done);
+            mButtonDone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     String email = mEditTextEmail.getText().toString();
                     String password = mEditTextPassword.getText().toString();
+                    String rePassword = mEditTextRePassword.getText().toString();
+                    String name = mEditTextName.getText().toString();
                     if (isValidConditions()) {
                         mEditTextEmail.setError(null);
                         mEditTextPassword.setError(null);
-                        new LoginAsyncTask(LoginActivity.this, mSharedPreferences).execute(email, password);
+                        mEditTextRePassword.setError(null);
+                        mEditTextName.setError(null);
+                        new RegisterAsynctask(RegisterActivity.this).execute(email, password, rePassword, name);
                     }
                 }
             });
-            TextView textViewLinkToRegister = (TextView) findViewById(R.id.text_link_to_register);
-            textViewLinkToRegister.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-                }
-            });
         } else {
-            Toast.makeText(LoginActivity.this, getString(R.string.dialog_login_success), Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this, getString(R.string.dialog_register_success), Toast.LENGTH_SHORT).show();
             finish();
         }
     }
 
     private boolean isValidConditions() {
         ValidationLogin validationUtils = new ValidationLogin(this);
-        if (!NetworkUtil.isInternetConnected(LoginActivity.this)) {
-            Toast.makeText(LoginActivity.this, getString(R.string.msg_no_internet), Toast.LENGTH_SHORT).show();
+        if (!NetworkUtil.isInternetConnected(RegisterActivity.this)) {
+            Toast.makeText(RegisterActivity.this, getString(R.string.msg_no_internet), Toast.LENGTH_SHORT).show();
             return false;
         } else {
             boolean isValidEmail = validationUtils.isValidEmail(mEditTextEmail);
             boolean isValidPassword = validationUtils.validatePassword(mEditTextPassword);
-            return isValidEmail && isValidPassword;
+            boolean isRePassWord = validationUtils.isValidRePassword(mEditTextRePassword, mEditTextPassword);
+            boolean isValidName = validationUtils.isValidName(mEditTextName);
+            return isValidEmail && isValidPassword && isRePassWord && isValidName;
         }
     }
 }
