@@ -64,14 +64,14 @@ public class ValidationLogin {
         return isValid;
     }
 
-    public boolean isValidRePassword(EditText editTextPasssword, EditText editTextRePasssword) {
+    public boolean isValidRePassword(EditText editTextRePasssword, EditText editTextPasssword) {
         boolean isValid = false;
         String password = editTextPasssword.getText().toString();
         String passwordConfirmation = editTextRePasssword.getText().toString();
         if (!password.equals(passwordConfirmation)) {
-            editTextPasssword.setError(mContext.getString(R.string.error_repassword_not_match));
+            editTextRePasssword.setError(mContext.getString(R.string.error_repassword_not_match));
         } else if (password.length() < PASSWORD_MIN_LENGTH) {
-            editTextPasssword.setError(mContext.getString(R.string.error_repassword_blank));
+            editTextRePasssword.setError(mContext.getString(R.string.error_repassword_blank));
         } else {
             isValid = true;
         }
