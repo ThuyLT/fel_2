@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_relative"
+        android:background="@color/header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height_relative"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/label_start_lesson"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_lesson"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_linear_lesson"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/text_lesson_name"
+            android:layout_width="@dimen/layout_width_lesson"
+            android:layout_height="match_parent"
+            android:layout_weight="90"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_textview_lesson"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/play_button" />
+    </LinearLayout>
+</LinearLayout>

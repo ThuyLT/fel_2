@@ -11,7 +11,19 @@ public class JsonKeyConstant {
     public static final String EMAIL_FILED = "email";
     public static final String AUTHO_TOKEN_FIELD = "auth_token";
     public static final String KEY_USER_ID = "userId";
+    public static final String PAGE = "page";
+    public static final String LESSON = "lesson";
+    public static final String WORDS = "words";
+    public static final String USER = "user";
+    public static final String KEY_ID = "id";
+    public static final String AVATAR = "avatar";
+    public static final String MESSAGE = "message";
+    public static final String CONTENT = "content";
+    public static final String CREATE_AT = "created_at";
     public static final String KEY_USER_PASSWORD = "userPassword";
+    public static final String CATEGORIES = "categories";
+    public static final String PHOTO = "photo";
+    public static final String LEARNED_WORDS = "learned_words";
 
     public static final String DEFAULT_LESSON_NAME = "Training Project";
     public static final String KEY_LESSON_ID = "lessonId";
@@ -30,6 +42,7 @@ public class JsonKeyConstant {
     public static final String DEFAULT_FILE_SAVED_PATH = Environment
             .getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();;
     public static final String SCORE_FORMAT = "%s/%s";
+    public static final String SCORE = "%s %s";
 
     public static final String KEY_USER_AVATAR_URL = "userAvatarUrl";
     public static final String KEY_ACTIVITIES = "activities";

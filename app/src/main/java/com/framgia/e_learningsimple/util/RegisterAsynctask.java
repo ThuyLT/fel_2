@@ -10,7 +10,7 @@ import com.framgia.e_learningsimple.constant.JsonKeyConstant;
 import com.framgia.e_learningsimple.model.RequestHelper;
 import com.framgia.e_learningsimple.model.ResponseHelper;
 import com.framgia.e_learningsimple.network.ErrorNetwork;
-import com.framgia.e_learningsimple.sharepreference.SharePreferences;
+import com.framgia.e_learningsimple.sharepreference.SharePreferenceUtil;
 import com.framgia.e_learningsimple.url.UrlJson;
 
 import org.json.JSONException;
@@ -44,14 +44,14 @@ public class RegisterAsynctask extends MyAsynctask<String, Void, String> {
         mUserPassword = args[2];
         mUserRePassword = args[3];
 
-        ValueName valueName1 = new ValueName(NAME_PARAMNAME, mUserName);
-        ValueName valueName2 = new ValueName(EMAIL_PARAMNAME, mUserEmail);
-        ValueName valueName3 = new ValueName(PASSWORD_PARAMNAME, mUserPassword);
-        ValueName valueName4 = new ValueName(REPASSWORD_PARAMNAME, mUserRePassword);
+        ValueName nameValue1 = new ValueName(NAME_PARAMNAME, mUserName);
+        ValueName nameValue2 = new ValueName(EMAIL_PARAMNAME, mUserEmail);
+        ValueName nameValue3 = new ValueName(PASSWORD_PARAMNAME, mUserPassword);
+        ValueName rePasswordValue = new ValueName(REPASSWORD_PARAMNAME, mUserRePassword);
         ResponseHelper responseHelper = null;
         try {
             ResponseHelper mHelper = RequestHelper.executeRequest(UrlJson.REGISTER_URL, RequestHelper.Method.POST,
-                    valueName1, valueName2, valueName3, valueName4);
+                    nameValue1, nameValue2, nameValue3, rePasswordValue);
             mStatusCode = mHelper.getResponeCode();
             mResponseBody = mHelper.getResponeBody();
         } catch (MalformedURLException e) {

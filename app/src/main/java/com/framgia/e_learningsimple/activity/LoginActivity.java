@@ -29,11 +29,11 @@ public class LoginActivity extends Activity {
         mSharedPreferences = getSharedPreferences(JsonKeyConstant.USER_SHARED_PREF, Context.MODE_PRIVATE);
         if (TextUtils.isEmpty(mSharedPreferences.getString(JsonKeyConstant.AUTHO_TOKEN_FIELD, null))) {
             setContentView(R.layout.activity_login);
-            Button button_Login = (Button) findViewById(R.id.btn_login);
+            Button loginButton = (Button) findViewById(R.id.btn_login);
             mEditTextEmail = (EditText) findViewById(R.id.edit_email);
             mEditTextPassword = (EditText) findViewById(R.id.edit_password);
 
-            button_Login.setOnClickListener(new View.OnClickListener() {
+            loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     String email = mEditTextEmail.getText().toString();
@@ -45,6 +45,7 @@ public class LoginActivity extends Activity {
                     }
                 }
             });
+
             TextView textViewLinkToRegister = (TextView) findViewById(R.id.text_link_to_register);
             textViewLinkToRegister.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -53,7 +54,7 @@ public class LoginActivity extends Activity {
                 }
             });
         } else {
-            Toast.makeText(LoginActivity.this, getString(R.string.dialog_login_success), Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();
         }
     }

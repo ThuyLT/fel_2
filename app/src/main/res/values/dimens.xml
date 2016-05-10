@@ -34,4 +34,20 @@
     <dimen name="layout_height_button">35dp</dimen>
     <dimen name="layout_width_image_avt">100dp</dimen>
     <dimen name="layout_height_image_avt">100dp</dimen>
+    <dimen name="layout_height_relative">60dp</dimen>
+    <dimen name="marginLeft_image_button">5dp</dimen>
+    <dimen name="marginStart_image_button">5dp</dimen>
+    <dimen name="text_size_category">22sp</dimen>
+    <dimen name="text_size_lesson">30sp</dimen>
+    <dimen name="layout_height_linear_lesson">80dp</dimen>
+    <dimen name="text_size_textview_lesson">25sp</dimen>
+    <dimen name="layout_width_category">90dp</dimen>
+    <dimen name="layout_height_category">90dp</dimen>
+    <dimen name="marginLeft_linear">10dp</dimen>
+    <dimen name="marginStart_linear">10dp</dimen>
+    <dimen name="textsize_category">20sp</dimen>
+    <dimen name="layout_height_item_category">40dp</dimen>
+    <dimen name="layout_width_lesson">0dp</dimen>
+    <dimen name="textsize_item_user">14sp</dimen>
+    <dimen name="layout_height_item_user">0dp</dimen>
 </resources>
