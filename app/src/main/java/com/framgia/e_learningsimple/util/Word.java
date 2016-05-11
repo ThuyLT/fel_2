@@ -8,21 +8,32 @@ import java.util.ArrayList;
 public class Word {
     private int mId;
     private String mContent;
+    private String mStatus;
     private ArrayList<Answer> mAnswers;
 
-    public Word(String content, ArrayList<Answer> answers) {
+    public Word(String content, ArrayList<Answer> answers, String status) {
         this.mContent = content;
         this.mAnswers = answers;
+        this.mStatus = status;
     }
 
-    public Word(int id, String content, ArrayList<Answer> answers) {
+    public Word(int id, String content, ArrayList<Answer> answers, String status) {
         this.mId = id;
         this.mContent = content;
         this.mAnswers = answers;
+        this.mStatus = status;
     }
 
     public int getId() {
         return mId;
+    }
+
+    public String getStatus() {
+        return mStatus;
+    }
+
+    public void setStatus(String mStatus) {
+        this.mStatus = mStatus;
     }
 
     public String getContent() {

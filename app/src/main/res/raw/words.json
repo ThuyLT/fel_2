@@ -4,6 +4,7 @@
       "id": 1,
       "result_id": 1,
       "content": "Red",
+      "status": "learned",
       "answers":
       [
         {
@@ -32,6 +33,7 @@
       "id": 2,
       "result_id": 2,
       "content": "Name",
+      "status": "learned",
       "answers":
       [
         {
@@ -60,6 +62,7 @@
       "id": 3,
       "result_id": 3,
       "content": "Idol",
+      "status": "learned",
       "answers":
       [
         {
@@ -88,6 +91,7 @@
       "id": 4,
       "result_id": 4,
       "content": "Chicken",
+      "status": "learned",
       "answers":
       [
         {
@@ -116,6 +120,7 @@
       "id": 5,
       "result_id": 5,
       "content": "Table",
+      "status": "learned",
       "answers":
       [
         {
@@ -144,6 +149,7 @@
       "id": 6,
       "result_id": 6,
       "content": "Close",
+      "status": "learned",
       "answers":
       [
         {
@@ -172,6 +178,7 @@
       "id": 7,
       "result_id": 7,
       "content": "Computer",
+      "status": "learned",
       "answers":
       [
         {
@@ -200,6 +207,7 @@
       "id": 8,
       "result_id": 8,
       "content": "Mouse",
+      "status": "learned",
       "answers":
       [
         {
@@ -228,6 +236,7 @@
       "id": 9,
       "result_id": 9,
       "content": "Ticket",
+      "status": "learned",
       "answers":
       [
         {
@@ -256,6 +265,7 @@
       "id": 10,
       "result_id": 10,
       "content": "Shoes",
+      "status": "learned",
       "answers":
       [
         {
@@ -284,6 +294,7 @@
       "id": 11,
       "result_id": 11,
       "content": "Learning",
+      "status": "learned",
       "answers":
       [
         {
@@ -312,6 +323,7 @@
       "id": 12,
       "result_id": 12,
       "content": "Look",
+      "status": "learned",
       "answers":
       [
         {
@@ -340,6 +352,7 @@
       "id": 13,
       "result_id": 13,
       "content": "Pen",
+      "status": "learned",
       "answers":
       [
         {
@@ -368,6 +381,7 @@
       "id": 14,
       "result_id": 14,
       "content": "Notebook",
+      "status": "learned",
       "answers":
       [
         {
@@ -396,6 +410,7 @@
       "id": 15,
       "result_id": 15,
       "content": "Smart",
+      "status": "learned",
       "answers":
       [
         {
@@ -424,6 +439,7 @@
       "id": 16,
       "result_id": 16,
       "content": "Open",
+      "status": "learned",
       "answers":
       [
         {
@@ -452,6 +468,7 @@
       "id": 17,
       "result_id": 17,
       "content": "Activity",
+      "status": "learned",
       "answers":
       [
         {
@@ -480,6 +497,7 @@
       "id": 18,
       "result_id": 18,
       "content": "Listen",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -508,6 +526,7 @@
       "id": 19,
       "result_id": 19,
       "content": "History",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -536,6 +555,7 @@
       "id": 20,
       "result_id": 20,
       "content": "information",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -564,6 +584,7 @@
       "id": 21,
       "result_id": 21,
       "content": "world",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -592,6 +613,7 @@
       "id": 22,
       "result_id": 22,
       "content": "map",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -620,6 +642,7 @@
       "id": 23,
       "result_id": 23,
       "content": "family",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -648,6 +671,7 @@
       "id": 24,
       "result_id": 24,
       "content": "government",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -676,6 +700,7 @@
       "id": 25,
       "result_id": 25,
       "content": "health",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -704,6 +729,7 @@
       "id": 26,
       "result_id": 26,
       "content": "system",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -732,6 +758,7 @@
       "id": 27,
       "result_id": 27,
       "content": "meat",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -760,6 +787,7 @@
       "id": 28,
       "result_id": 28,
       "content": "year",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -788,6 +816,7 @@
       "id": 29,
       "result_id": 29,
       "content": "music",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -816,6 +845,7 @@
       "id": 30,
       "result_id": 30,
       "content": "method",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -844,6 +874,7 @@
       "id": 31,
       "result_id": 31,
       "content": "data",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -872,6 +903,7 @@
       "id": 32,
       "result_id": 32,
       "content": "understanding",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -900,6 +932,7 @@
       "id": 33,
       "result_id": 33,
       "content": "theory",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -928,6 +961,7 @@
       "id": 34,
       "result_id": 34,
       "content": "law",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -956,6 +990,7 @@
       "id": 35,
       "result_id": 35,
       "content": "bird",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -984,6 +1019,7 @@
       "id": 36,
       "result_id": 36,
       "content": "literature",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1012,6 +1048,7 @@
       "id": 37,
       "result_id": 37,
       "content": "problem",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1040,6 +1077,7 @@
       "id": 38,
       "result_id": 38,
       "content": "software",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1068,6 +1106,7 @@
       "id": 39,
       "result_id": 39,
       "content": "control",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1096,6 +1135,7 @@
       "id": 40,
       "result_id": 40,
       "content": "knowledge",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1124,6 +1164,7 @@
       "id": 41,
       "result_id": 41,
       "content": "power",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1152,6 +1193,7 @@
       "id": 42,
       "result_id": 42,
       "content": "ability",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1180,6 +1222,7 @@
       "id": 43,
       "result_id": 43,
       "content": "economics",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1208,6 +1251,7 @@
       "id": 44,
       "result_id": 44,
       "content": "love",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1236,6 +1280,7 @@
       "id": 45,
       "result_id": 45,
       "content": "science",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1264,6 +1309,7 @@
       "id": 46,
       "result_id": 46,
       "content": "library",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1292,6 +1338,7 @@
       "id": 47,
       "result_id": 47,
       "content": "nature",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1320,6 +1367,7 @@
       "id": 48,
       "result_id": 48,
       "content": "product",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -1348,6 +1396,7 @@
       "id": 49,
       "result_id": 49,
       "content": "idea",
+      "status": "learned",
       "answers":
       [
         {
@@ -1376,6 +1425,7 @@
       "id": 50,
       "result_id": 50,
       "content": "temperature",
+      "status": "learned",
       "answers":
       [
         {
@@ -1404,6 +1454,7 @@
       "id": 51,
       "result_id": 51,
       "content": "investment",
+      "status": "learned",
       "answers":
       [
         {
@@ -1432,6 +1483,7 @@
       "id": 52,
       "result_id": 52,
       "content": "area",
+      "status": "learned",
       "answers":
       [
         {
@@ -1460,6 +1512,7 @@
       "id": 53,
       "result_id": 53,
       "content": "society",
+      "status": "learned",
       "answers":
       [
         {
@@ -1488,6 +1541,7 @@
       "id": 54,
       "result_id": 54,
       "content": "story",
+      "status": "learned",
       "answers":
       [
         {
@@ -1516,6 +1570,7 @@
       "id": 55,
       "result_id": 55,
       "content": "industry",
+      "status": "learned",
       "answers":
       [
         {
@@ -1544,6 +1599,7 @@
       "id": 56,
       "result_id": 56,
       "content": "oven",
+      "status": "learned",
       "answers":
       [
         {
@@ -1572,6 +1628,7 @@
       "id": 57,
       "result_id": 57,
       "content": "community",
+      "status": "learned",
       "answers":
       [
         {
@@ -1600,6 +1657,7 @@
       "id": 58,
       "result_id": 58,
       "content": "definition",
+      "status": "learned",
       "answers":
       [
         {
@@ -1628,6 +1686,7 @@
       "id": 59,
       "result_id": 59,
       "content": "safety",
+      "status": "learned",
       "answers":
       [
         {
@@ -1656,6 +1715,7 @@
       "id": 60,
       "result_id": 60,
       "content": "quality",
+      "status": "learned",
       "answers":
       [
         {
@@ -1684,6 +1744,7 @@
       "id": 61,
       "result_id": 61,
       "content": "development",
+      "status": "learned",
       "answers":
       [
         {
@@ -1712,6 +1773,7 @@
       "id": 62,
       "result_id": 62,
       "content": "language",
+      "status": "learned",
       "answers":
       [
         {
@@ -1740,6 +1802,7 @@
       "id": 63,
       "result_id": 63,
       "content": "variety",
+      "status": "learned",
       "answers":
       [
         {
@@ -1768,6 +1831,7 @@
       "id": 64,
       "result_id": 64,
       "content": "Organization",
+      "status": "learned",
       "answers":
       [
         {
@@ -1796,6 +1860,7 @@
       "id": 65,
       "result_id": 65,
       "content": "equipment",
+      "status": "learned",
       "answers":
       [
         {
@@ -1824,6 +1889,7 @@
       "id": 66,
       "result_id": 66,
       "content": "physics",
+      "status": "learned",
       "answers":
       [
         {
@@ -1852,6 +1918,7 @@
       "id": 67,
       "result_id": 67,
       "content": "analysis",
+      "status": "learned",
       "answers":
       [
         {
@@ -1880,6 +1947,7 @@
       "id": 68,
       "result_id": 68,
       "content": "policy",
+      "status": "learned",
       "answers":
       [
         {
@@ -1908,6 +1976,7 @@
       "id": 69,
       "result_id": 69,
       "content": "technology",
+      "status": "learned",
       "answers":
       [
         {
@@ -1936,6 +2005,7 @@
       "id": 70,
       "result_id": 70,
       "content": "army",
+      "status": "learned",
       "answers":
       [
         {
@@ -1964,6 +2034,7 @@
       "id": 71,
       "result_id": 71,
       "content": "environment",
+      "status": "learned",
       "answers":
       [
         {
@@ -1992,6 +2063,7 @@
       "id": 72,
       "result_id": 72,
       "content": "article",
+      "status": "learned",
       "answers":
       [
         {
@@ -2020,6 +2092,7 @@
       "id": 73,
       "result_id": 73,
       "content": "goal",
+      "status": "learned",
       "answers":
       [
         {
@@ -2048,6 +2121,7 @@
       "id": 74,
       "result_id": 74,
       "content": "audience",
+      "status": "learned",
       "answers":
       [
         {
@@ -2076,6 +2150,7 @@
       "id": 75,
       "result_id": 75,
       "content": "marriage",
+      "status": "learned",
       "answers":
       [
         {
@@ -2104,6 +2179,7 @@
       "id": 76,
       "result_id": 76,
       "content": "combination",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2132,6 +2208,7 @@
       "id": 77,
       "result_id": 77,
       "content": "medicine",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2160,6 +2237,7 @@
       "id": 78,
       "result_id": 78,
       "content": "philosophy",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2188,6 +2266,7 @@
       "id": 79,
       "result_id": 79,
       "content": "communication",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2216,6 +2295,7 @@
       "id": 80,
       "result_id": 80,
       "content": "chemistry",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2244,6 +2324,7 @@
       "id": 81,
       "result_id": 81,
       "content": "disease",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2272,6 +2353,7 @@
       "id": 82,
       "result_id": 82,
       "content": "energy",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2300,6 +2382,7 @@
       "id": 83,
       "result_id": 83,
       "content": "advertising",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2328,6 +2411,7 @@
       "id": 84,
       "result_id": 84,
       "content": "apartment",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2356,6 +2440,7 @@
       "id": 85,
       "result_id": 85,
       "content": "education",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2384,6 +2469,7 @@
       "id": 86,
       "result_id": 86,
       "content": "moment",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2412,6 +2498,7 @@
       "id": 87,
       "result_id": 87,
       "content": "painting",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2440,6 +2527,7 @@
       "id": 88,
       "result_id": 88,
       "content": "politics",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2468,6 +2556,7 @@
       "id": 89,
       "result_id": 89,
       "content": "attention",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2496,6 +2585,7 @@
       "id": 90,
       "result_id": 90,
       "content": "decision",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2524,6 +2614,7 @@
       "id": 91,
       "result_id": 91,
       "content": "wood",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2552,6 +2643,7 @@
       "id": 92,
       "result_id": 92,
       "content": "competition",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2580,6 +2672,7 @@
       "id": 93,
       "result_id": 93,
       "content": "distribution",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2608,6 +2701,7 @@
       "id": 94,
       "result_id": 94,
       "content": "entertainment",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2636,6 +2730,7 @@
       "id": 95,
       "result_id": 95,
       "content": "population",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2664,6 +2759,7 @@
       "id": 96,
       "result_id": 96,
       "content": "president",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2692,6 +2788,7 @@
       "id": 97,
       "result_id": 97,
       "content": "category",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2720,6 +2817,7 @@
       "id": 98,
       "result_id": 98,
       "content": "cigarette",
+      "status": "no_learn",
       "answers":
       [
         {
@@ -2748,6 +2846,7 @@
       "id": 99,
       "result_id": 99,
       "content": "performance",
+      "status": "learned",
       "answers":
       [
         {
@@ -2776,6 +2875,7 @@
       "id": 100,
       "result_id": 100,
       "content": "appearance",
+      "status": "learned",
       "answers":
       [
         {
