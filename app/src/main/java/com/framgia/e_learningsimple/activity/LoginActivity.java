@@ -13,15 +13,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.framgia.e_learningsimple.R;
+import com.framgia.e_learningsimple.sharepreference.SharePreferenceUtil;
 import com.framgia.e_learningsimple.util.NetworkUtil;
 import com.framgia.e_learningsimple.util.ValidationLogin;
 import com.framgia.e_learningsimple.constant.JsonKeyConstant;
 import com.framgia.e_learningsimple.util.LoginAsyncTask;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class LoginActivity extends Activity {
     EditText mEditTextEmail;
     EditText mEditTextPassword;
     private SharedPreferences mSharedPreferences;
+    private LoginAsyncTask.OnLoginSuccess mOnLoginSuccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,24 @@ public class LoginActivity extends Activity {
             mEditTextEmail = (EditText) findViewById(R.id.edit_email);
             mEditTextPassword = (EditText) findViewById(R.id.edit_password);
 
+            mOnLoginSuccess = new LoginAsyncTask.OnLoginSuccess( ) {
+                @Override
+                public void onSuccess(String responseBody) {
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    String activitiesStr = null;
+                    try {
+                        activitiesStr = new JSONObject(responseBody).optJSONObject(JsonKeyConstant.USER).optString(JsonKeyConstant.KEY_ACTIVITIES);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    SharePreferenceUtil.putString(mSharedPreferences, JsonKeyConstant.KEY_ACTIVITIES, activitiesStr);
+                    startActivity(intent);
+                    finish();
+                }
+            };
+
             loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -41,7 +64,7 @@ public class LoginActivity extends Activity {
                     if (isValidConditions()) {
                         mEditTextEmail.setError(null);
                         mEditTextPassword.setError(null);
-                        new LoginAsyncTask(LoginActivity.this, mSharedPreferences).execute(email, password);
+                        new LoginAsyncTask(LoginActivity.this, mSharedPreferences, mOnLoginSuccess).execute(email, password);
                     }
                 }
             });

@@ -48,4 +48,10 @@
     <string name="exit">Do you want to close app?</string>
     <string name="logout">Log out</string>
     <string name="hide">Hide</string>
+    <string name="word_list">Word List</string>
+    <string name="unknow_answer">Unknow answer</string>
+    <string name="no_category_found">No category found</string>
+    <string name="key_all_word">All</string>
+    <string name="key_learned">Learned</string>
+    <string name="key_not_learned">Not learned</string>
 </resources>

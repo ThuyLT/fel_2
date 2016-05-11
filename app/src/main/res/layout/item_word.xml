@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_item_word"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <TextView
+        android:id="@+id/text_origin_word"
+        android:layout_width="@dimen/layout_height_item_user"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_word_meaning"
+        android:layout_width="@dimen/layout_height_item_user"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="@dimen/text_size" />
+</LinearLayout>
