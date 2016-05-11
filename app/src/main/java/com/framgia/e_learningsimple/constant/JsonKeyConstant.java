@@ -24,6 +24,10 @@ public class JsonKeyConstant {
     public static final String CATEGORIES = "categories";
     public static final String PHOTO = "photo";
     public static final String LEARNED_WORDS = "learned_words";
+    public static final String CATEGORY_ID = "category_id";
+    public static final String OPTION = "option";
+    public static final String ANSWERS = "answers";
+    public static final String IS_CORRECT = "is_correct";
 
     public static final String DEFAULT_LESSON_NAME = "Training Project";
     public static final String KEY_LESSON_ID = "lessonId";
@@ -40,7 +44,8 @@ public class JsonKeyConstant {
     public static final String KEY_NOT_LEARNED = "no_learn";
     public static final String DEFAULT_WORDLIST_FILE_NAME = "wordlist";
     public static final String DEFAULT_FILE_SAVED_PATH = Environment
-            .getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();;
+            .getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();
+    ;
     public static final String SCORE_FORMAT = "%s/%s";
     public static final String SCORE = "%s %s";
 

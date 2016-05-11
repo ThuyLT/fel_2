@@ -1,6 +1,7 @@
 package com.framgia.e_learningsimple.util;
 
 import android.app.Activity;
+import android.app.LauncherActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 import com.framgia.e_learningsimple.R;
 import com.framgia.e_learningsimple.activity.HomeActivity;
+import com.framgia.e_learningsimple.activity.LoginActivity;
 import com.framgia.e_learningsimple.constant.JsonKeyConstant;
 import com.framgia.e_learningsimple.model.RequestHelper;
 import com.framgia.e_learningsimple.model.ResponseHelper;
@@ -32,13 +34,14 @@ public class LoginAsyncTask extends MyAsynctask<String, Void, String> {
     String mUserPassword;
     private int mStatusCode;
     private String mResponeBody;
-
+    private OnLoginSuccess mOnLoginSuccess;
 
     private SharedPreferences mSharedPreferences;
 
-    public LoginAsyncTask(Context mContext, SharedPreferences sharedPreferences) {
+    public LoginAsyncTask(Context mContext, SharedPreferences sharedPreferences, OnLoginSuccess onLoginSuccess) {
         super(mContext);
         this.mSharedPreferences = sharedPreferences;
+        mOnLoginSuccess = onLoginSuccess;
     }
 
     @Override
@@ -68,12 +71,7 @@ public class LoginAsyncTask extends MyAsynctask<String, Void, String> {
             case ErrorNetwork.OK:
                 try {
                     storeUserInfo();
-                    Intent intent = new Intent(mContext, HomeActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    String activitiesStr = new JSONObject(mResponeBody).optJSONObject(JsonKeyConstant.USER).optString(JsonKeyConstant.KEY_ACTIVITIES);
-                    SharePreferenceUtil.putString(mSharedPreferences, JsonKeyConstant.KEY_ACTIVITIES, activitiesStr);
-//                    mContext.startActivity(intent);
-                    ((Activity) mContext).finish();
+                    mOnLoginSuccess.onSuccess(mResponeBody);
                 } catch (JSONException e) {
                     Toast.makeText(mContext, mContext.getString(R.string.error_response_data), Toast.LENGTH_SHORT).show();
                 }
@@ -86,7 +84,6 @@ public class LoginAsyncTask extends MyAsynctask<String, Void, String> {
                 ResponseHelper.httpStatusNotify(mContext, mStatusCode);
         }
     }
-
 
     private void storeUserInfo() throws JSONException {
         JSONObject responseJson = new JSONObject(mResponeBody);
@@ -107,6 +104,10 @@ public class LoginAsyncTask extends MyAsynctask<String, Void, String> {
             e.printStackTrace();
             Toast.makeText(mContext, defaultMessage, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public interface OnLoginSuccess {
+        public void onSuccess( String responseBody) throws JSONException;
     }
 
 }

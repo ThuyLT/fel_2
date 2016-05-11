@@ -32,7 +32,6 @@ import java.util.ArrayList;
  * Created by ThuyIT on 25/04/2016.
  */
 public class HomeActivity extends Activity {
-
     private SharedPreferences mSharedPreferences;
     private ImageView mImageAvatar;
     private TextView mTextViewCurrentUserName;
@@ -116,7 +115,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (NetworkUtil.isInternetConnected(HomeActivity.this)) {
-                    new ObtainCategoriesAsyncTask(HomeActivity.this, mCategoriesList, NetworkUtil.sAuthToken, 1).execute();
+                    new ObtainCategoriesTask(HomeActivity.this, mCategoriesList, NetworkUtil.sAuthToken, 1).execute();
                 }
             }
         });
@@ -128,6 +127,21 @@ public class HomeActivity extends Activity {
                 }
             }
         });
+    }
+
+    private class ObtainCategoriesTask extends ObtainCategoriesAsyncTask {
+        ObtainCategoriesTask(Activity activity, ArrayList<Category> categories, String authToken, int currentPage) {
+            super(activity, categories, authToken, currentPage);
+            categories.clear();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            Intent intent = new Intent(HomeActivity.this, WordListActivity.class);
+            intent.putExtra(JsonKeyConstant.KEY_CATEGORY_LIST, mCategoriesList);
+            startActivity(intent);
+        }
     }
 
 }

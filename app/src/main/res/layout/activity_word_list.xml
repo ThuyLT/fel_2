@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_relative_word_list"
+        android:background="@color/header">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/marginLeft_linear_word_list"
+            android:layout_marginStart="@dimen/marginStart_linear_word_list"
+            android:background="@color/header"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height_relative_word_list"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/word_list"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_textview_word_list"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_text"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="@dimen/layout_width_lesson"
+            android:layout_height="@dimen/layout_height_text"
+            android:layout_weight="1"></Spinner>
+
+        <Spinner
+            android:id="@+id/spinner_status"
+            android:layout_width="@dimen/layout_width_lesson"
+            android:layout_height="@dimen/layout_height_text"
+            android:layout_marginLeft="@dimen/marginLeft_linear"
+            android:layout_marginStart="@dimen/marginStart_linear"
+            android:layout_weight="1"></Spinner>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_words"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/layout_margin_End"
+        android:layout_marginLeft="@dimen/layout_marginLeft"
+        android:layout_marginRight="@dimen/layout_margin_Right"
+        android:layout_marginStart="@dimen/marginStart_word_list"
+        android:layout_marginTop="@dimen/margin_top_word_list" />
+</LinearLayout>

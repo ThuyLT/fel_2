@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.ImageButton;
 
 import com.framgia.e_learningsimple.R;
@@ -40,7 +41,6 @@ public class CategoryActivity extends Activity {
             new ObtainCategoriesTask(CategoryActivity.this, mCategoryList, mAuthToken, mCurrentPage)
                     .execute(mAuthToken);
         }
-        setUpEventHandlers();
     }
 
     private void initialize() {
@@ -50,6 +50,12 @@ public class CategoryActivity extends Activity {
         mRecycleViewCategories = (RecyclerView) findViewById(R.id.list_categories);
         mCategoryAdapter = new CategoryAdapter(this, mCategoryList);
         mLayoutManager = new LinearLayoutManager(this);
+        mBtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setupCategoryRecycleView() {
@@ -58,25 +64,17 @@ public class CategoryActivity extends Activity {
         mRecycleViewCategories.setAdapter(mCategoryAdapter);
     }
 
-    private void setUpEventHandlers() {
-        mRecycleViewCategories.addOnScrollListener(new EndlessRecyclerOnScrollListener(mLayoutManager) {
-            public void onLoadMore() {
-                new ObtainCategoriesTask(CategoryActivity.this, mCategoryList, mAuthToken, mCurrentPage)
-                        .execute();
-            }
-        });
+
+private class ObtainCategoriesTask extends ObtainCategoriesAsyncTask {
+    ObtainCategoriesTask(Activity activity, ArrayList<Category> categories, String authToken, int currentPage) {
+        super(activity, categories, authToken, currentPage);
     }
 
-    private class ObtainCategoriesTask extends ObtainCategoriesAsyncTask {
-        ObtainCategoriesTask(Activity activity, ArrayList<Category> categories, String authToken, int currentPage) {
-            super(activity, categories, authToken, currentPage);
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            super.onPostExecute(result);
-            mCurrentPage++;
-            mCategoryAdapter.notifyDataSetChanged();
-        }
+    @Override
+    protected void onPostExecute(String result) {
+        super.onPostExecute(result);
+        mCurrentPage++;
+        mCategoryAdapter.notifyDataSetChanged();
     }
+}
 }

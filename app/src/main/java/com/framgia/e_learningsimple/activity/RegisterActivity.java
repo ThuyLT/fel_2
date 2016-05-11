@@ -145,7 +145,7 @@ public class RegisterActivity extends Activity {
                 case ErrorNetwork.OK:
                     try {
                         storeUserInfo();
-
+                        mOnSignupSuccess.onSuccess(mResponseBody);
 
                     } catch (JSONException e) {
                         Toast.makeText(mContext, mContext.getString(R.string.error_response_data), Toast.LENGTH_SHORT).show();
@@ -159,7 +159,6 @@ public class RegisterActivity extends Activity {
                     ResponseHelper.httpStatusNotify(RegisterActivity.this, mStatusCode);
             }
         }
-
 
         private void notifyErrors(String defaultMessage) {
             try {
