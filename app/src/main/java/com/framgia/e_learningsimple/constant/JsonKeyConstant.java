@@ -28,6 +28,7 @@ public class JsonKeyConstant {
     public static final String OPTION = "option";
     public static final String ANSWERS = "answers";
     public static final String IS_CORRECT = "is_correct";
+    public static final String RESULT_ID = "result_id";
 
     public static final String DEFAULT_LESSON_NAME = "Training Project";
     public static final String KEY_LESSON_ID = "lessonId";
@@ -52,4 +53,6 @@ public class JsonKeyConstant {
 
     public static final String KEY_USER_AVATAR_URL = "userAvatarUrl";
     public static final String KEY_ACTIVITIES = "activities";
+    public static final int LESSON_ID = -1;
+    public static final String KEY_LEARNER = "1";
 }

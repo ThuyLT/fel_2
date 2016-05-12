@@ -59,4 +59,12 @@
     <dimen name="marginStart_word_list">30dp</dimen>
     <dimen name="margin_top_word_list">10dp</dimen>
     <dimen name="height_item_word">40dp</dimen>
+    <dimen name="height_linear_item_result">50dp</dimen>
+    <dimen name="height_image_item_result">50dp</dimen>
+    <dimen name="width_image_item_result">50dp</dimen>
+    <dimen name="layout_marginTop_result">20dp</dimen>
+    <dimen name="height_fragment_question">400dp</dimen>
+    <dimen name="height_item_answer">80dp</dimen>
+    <dimen name="layout_margin_item_answer">15dp</dimen>
+    <dimen name="minHeight_item_answer">40dp</dimen>
 </resources>

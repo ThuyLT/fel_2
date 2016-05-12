@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_relative"
+        android:background="@color/header">
+
+        <TextView
+            android:id="@+id/text_lesson_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height_relative"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/label_start_lesson"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_lesson"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/marginLeft_linear_word_list"
+            android:layout_marginStart="@dimen/marginStart_linear_word_list"
+            android:background="@color/header"
+            android:src="@mipmap/ic_ok" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</LinearLayout>

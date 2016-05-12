@@ -18,6 +18,7 @@ import com.framgia.e_learningsimple.network.ErrorNetwork;
 import com.framgia.e_learningsimple.sharepreference.SharePreferenceUtil;
 import com.framgia.e_learningsimple.url.UrlJson;
 import com.framgia.e_learningsimple.util.MyAsynctask;
+import com.framgia.e_learningsimple.util.NetworkUtil;
 import com.framgia.e_learningsimple.util.ValueName;
 
 import org.json.JSONException;
@@ -31,7 +32,6 @@ import java.io.IOException;
 public class LessonActivity extends Activity {
     private SharedPreferences mSharedPreferences;
     private TextView mTextViewLessonName;
-    private String mAuthToken;
     private int mCategoryId;
     private String mCategoryName;
     private int mLessonId;
@@ -40,9 +40,10 @@ public class LessonActivity extends Activity {
     public void onCreate(Bundle savedInstaceState) {
         super.onCreate(savedInstaceState);
         setContentView(R.layout.activity_lesson);
+        setUpButtonsClickedEventHandler();
         initialize();
-        if (mCategoryId != -1 && !TextUtils.isEmpty(mAuthToken)) {
-            new CreateLessionAsynTask(LessonActivity.this).execute(mAuthToken, String.valueOf(mCategoryId));
+        if (mCategoryId != -1 && !TextUtils.isEmpty(NetworkUtil.sAuthToken)) {
+            new CreateLessionAsynTask(LessonActivity.this).execute(NetworkUtil.sAuthToken, String.valueOf(mCategoryId));
         } else {
             finish();
         }
@@ -51,10 +52,25 @@ public class LessonActivity extends Activity {
     public void onBackPressed() {
     }
 
+    private void setUpButtonsClickedEventHandler() {
+        ImageButton btnStartTest = (ImageButton) findViewById(R.id.btn_start);
+        btnStartTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LessonActivity.this, DoingLessonActivity.class);
+                intent.putExtra(JsonKeyConstant.KEY_LESSON_ID, mLessonId);
+                intent.putExtra(JsonKeyConstant.KEY_LESSON_NAME, mLessonName);
+                intent.putExtra(JsonKeyConstant.KEY_CATEGORY_NAME, mCategoryName);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+
     private void initialize() {
         mTextViewLessonName = (TextView) findViewById(R.id.text_lesson_name);
         mSharedPreferences = getSharedPreferences(JsonKeyConstant.USER_SHARED_PREF, Context.MODE_PRIVATE);
-        mAuthToken = mSharedPreferences.getString(JsonKeyConstant.AUTHO_TOKEN_FIELD, null);
+        NetworkUtil.sAuthToken = mSharedPreferences.getString(JsonKeyConstant.AUTHO_TOKEN_FIELD, null);
         Intent data = getIntent();
         mCategoryId = data.getIntExtra(JsonKeyConstant.KEY_CATEGORY_ID, -1);
         mCategoryName = data.getStringExtra(JsonKeyConstant.KEY_CATEGORY_NAME);
@@ -108,7 +124,5 @@ public class LessonActivity extends Activity {
                     ResponseHelper.httpStatusNotify(LessonActivity.this, mStatusCode);
             }
         }
-
     }
-
 }
