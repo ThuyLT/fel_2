@@ -42,6 +42,7 @@ public class JsonKeyConstant {
     public static final String KEY_ALL_WORD = "all_word";
     public static final String KEY_LEARNED = "learned";
     public static final String KEY_NOT_LEARNED = "no_learn";
+    public static final String KEY_WORD_STATUS = "status";
     public static final String DEFAULT_WORDLIST_FILE_NAME = "wordlist";
     public static final String DEFAULT_FILE_SAVED_PATH = Environment
             .getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();

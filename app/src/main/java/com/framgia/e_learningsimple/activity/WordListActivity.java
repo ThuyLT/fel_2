@@ -19,16 +19,10 @@ import com.framgia.e_learningsimple.R;
 import com.framgia.e_learningsimple.adapter.WordAdapter;
 import com.framgia.e_learningsimple.constant.JsonKeyConstant;
 import com.framgia.e_learningsimple.listener.EndlessRecyclerOnScrollListener;
-import com.framgia.e_learningsimple.model.RequestHelper;
-import com.framgia.e_learningsimple.model.ResponseHelper;
-import com.framgia.e_learningsimple.network.ErrorNetwork;
-import com.framgia.e_learningsimple.url.UrlJson;
 import com.framgia.e_learningsimple.util.Answer;
 import com.framgia.e_learningsimple.util.Category;
 import com.framgia.e_learningsimple.util.DialogUtil;
-import com.framgia.e_learningsimple.util.MyAsynctask;
 import com.framgia.e_learningsimple.util.NetworkUtil;
-import com.framgia.e_learningsimple.util.ValueName;
 import com.framgia.e_learningsimple.util.Word;
 
 import org.json.JSONArray;
@@ -38,10 +32,7 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by ThuyIT on 10/05/2016.
@@ -94,6 +85,7 @@ public class WordListActivity extends Activity {
                 onBackPressed();
             }
         });
+        loadWordList();
     }
 
     private void setupWordRecycleView() {
@@ -138,7 +130,8 @@ public class WordListActivity extends Activity {
         mSpinnerStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                changeFilterHandler();
+                String status = mStatusList.get(position);
+                mWordAdapter.getFilter().filter(status);
             }
 
             @Override
@@ -209,15 +202,16 @@ public class WordListActivity extends Activity {
             int numOfWords = wordsJson.length();
             for (int i = 0; i < numOfWords; i++) {
                 String mWordContent = wordsJson.optJSONObject(i).optString(JsonKeyConstant.CONTENT);
+                String statusWord = wordsJson.optJSONObject(i).optString(JsonKeyConstant.KEY_WORD_STATUS);
                 JSONArray answersJson = wordsJson.optJSONObject(i).optJSONArray(JsonKeyConstant.ANSWERS);
                 ArrayList<Answer> mAnswers = new ArrayList<Answer>();
                 int numOfAnswers = answersJson.length();
                 for (int j = 0; j < numOfAnswers; j++) {
                     String answerContent = answersJson.optJSONObject(j).optString(JsonKeyConstant.CONTENT);
-                    Boolean isCorrect = answersJson.optJSONObject(j).optBoolean(JsonKeyConstant.IS_CORRECT);
+                    boolean isCorrect = answersJson.optJSONObject(j).optBoolean(JsonKeyConstant.IS_CORRECT);
                     mAnswers.add(new Answer(answerContent, isCorrect));
                 }
-                mWordsList.add(new Word(mWordContent, mAnswers));
+                mWordsList.add(new Word(mWordContent, mAnswers, statusWord));
             }
             mWordAdapter.notifyDataSetChanged();
         }
