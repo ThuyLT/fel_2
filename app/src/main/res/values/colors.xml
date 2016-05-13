@@ -10,4 +10,5 @@
     <color name="blue">#0b32f2</color>
     <color name="header">#3bf408</color>
     <color name="bg_blue">#f5f504</color>
+    <color name="text_msg_input">#626262</color>
 </resources>
