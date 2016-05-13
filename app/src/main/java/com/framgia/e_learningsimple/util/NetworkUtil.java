@@ -19,8 +19,9 @@ public class NetworkUtil {
                 context.getSystemService(Context.CONNECTIVITY_SERVICE);
         boolean result = false;
         if (connectivityManager != null) {
-            NetworkInfo networkInfo = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-            if (networkInfo != null && networkInfo.isConnected()) {
+            NetworkInfo networkWifi = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+            NetworkInfo networkMobile = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+            if ((networkWifi != null && networkWifi.isConnected())|| (networkMobile!=null && networkMobile.isConnected())) {
                 result = true;
             }
         }

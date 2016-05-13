@@ -27,5 +27,6 @@
         <activity android:name=".activity.LessonActivity"/>
         <activity android:name=".activity.CategoryActivity"/>
         <activity android:name=".activity.WordListActivity"/>
+        <activity android:name=".activity.DoingLessonActivity"/>
     </application>
 </manifest>

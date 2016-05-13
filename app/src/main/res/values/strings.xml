@@ -54,4 +54,8 @@
     <string name="key_all_word">All</string>
     <string name="key_learned">Learned</string>
     <string name="key_not_learned">Not learned</string>
+    <string name="not_answered">Not answered</string>
+    <string name="label_question">Question \#</string>
+    <string name="error_cannot_save_result">Cannot save result</string>
+    <string name="label_result">Result</string>
 </resources>
