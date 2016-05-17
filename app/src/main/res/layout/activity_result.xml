@@ -12,8 +12,9 @@
 
         <ImageButton
             android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/width_image_doing_lesson"
+            android:layout_height="@dimen/height_image_doing_lesson"
+            android:scaleType="fitXY"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
@@ -31,18 +32,6 @@
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_textview_lesson"
             android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/btn_ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/marginLeft_linear_word_list"
-            android:layout_marginStart="@dimen/marginStart_linear_word_list"
-            android:background="@color/header"
-            android:src="@mipmap/ic_ok" />
     </RelativeLayout>
 
     <TextView

@@ -12,42 +12,30 @@
         android:background="@color/actionbar"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/relative_fullname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/button_cancel"
-                android:layout_width="@dimen/layout_width_button"
-                android:layout_height="@dimen/layout_height_button"
-                android:layout_alignParentStart="true"
-                android:background="@mipmap/ic_cancel" />
+        <LinearLayout
+            android:id="@+id/linear_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_linear">
 
             <TextView
                 android:id="@+id/text_app_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:text="@string/app_full_name"
                 android:textColor="@color/white"
                 android:textSize="@dimen/textview_textsize" />
-
-            <Button
-                android:id="@+id/button_done"
-                android:layout_width="@dimen/layout_width_button"
-                android:layout_height="@dimen/layout_height_button"
-                android:layout_alignParentEnd="true"
-                android:background="@mipmap/ic_done" />
-        </RelativeLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/relative_fullname"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="@dimen/padding_linear">
+            android:padding="@dimen/padding_linear"
+            android:layout_below="@+id/linear_register">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -58,7 +46,7 @@
                 <ImageView
                     android:layout_width="@dimen/layout_width"
                     android:layout_height="@dimen/layout_height"
-                    android:src="@mipmap/ic_email" />
+                    android:src="@mipmap/ic_email_blue" />
 
                 <TextView
                     android:id="@+id/text_email"
@@ -194,6 +182,17 @@
                     android:layout_below="@+id/imageView"
                     android:layout_centerHorizontal="true" />
             </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:background="@drawable/button_selector"
+                android:paddingLeft="@dimen/padding_left"
+                android:paddingRight="@dimen/padding_left"
+                android:text="@string/submit"
+                android:textColor="@color/white" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

@@ -22,8 +22,9 @@
 
         <ImageButton
             android:id="@+id/btn_finish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/width_image_doing_lesson"
+            android:layout_height="@dimen/height_image_doing_lesson"
+            android:scaleType="fitXY"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"

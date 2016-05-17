@@ -29,7 +29,7 @@
     <dimen name="height_linear">80dp</dimen>
     <dimen name="layout_marginLeft">30dp</dimen>
     <dimen name="layout_marginRight">30dp</dimen>
-    <dimen name="layout_height_text">50dp</dimen>
+    <dimen name="layout_height_text">80dp</dimen>
     <dimen name="layout_width_button">60dp</dimen>
     <dimen name="layout_height_button">35dp</dimen>
     <dimen name="layout_width_image_avt">100dp</dimen>
@@ -48,7 +48,7 @@
     <dimen name="textsize_category">20sp</dimen>
     <dimen name="layout_height_item_category">40dp</dimen>
     <dimen name="layout_width_lesson">0dp</dimen>
-    <dimen name="textsize_item_user">14sp</dimen>
+    <dimen name="textsize_item_user">12sp</dimen>
     <dimen name="layout_height_item_user">0dp</dimen>
     <dimen name="layout_height_relative_word_list">60dp</dimen>
     <dimen name="marginLeft_linear_word_list">5dp</dimen>
@@ -67,4 +67,9 @@
     <dimen name="height_item_answer">80dp</dimen>
     <dimen name="layout_margin_item_answer">15dp</dimen>
     <dimen name="minHeight_item_answer">40dp</dimen>
+
+    <dimen name="height_image_doing_lesson">30dp</dimen>
+    <dimen name="width_image_doing_lesson">30dp</dimen>
+    <dimen name="height_image_lesson">50dp</dimen>
+    <dimen name="width_image_lesson">50dp</dimen>
 </resources>

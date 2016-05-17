@@ -12,14 +12,15 @@
 
         <ImageButton
             android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/width_image_doing_lesson"
+            android:layout_height="@dimen/height_image_doing_lesson"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/marginLeft_image_button"
             android:layout_marginStart="@dimen/marginStart_image_button"
             android:background="@color/header"
+            android:scaleType="fitXY"
             android:src="@mipmap/ic_back" />
 
         <TextView

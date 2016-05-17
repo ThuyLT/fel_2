@@ -30,6 +30,11 @@ public class JsonKeyConstant {
     public static final String IS_CORRECT = "is_correct";
     public static final String RESULT_ID = "result_id";
 
+    public static String TABLE_NAME = "results";
+    public static String RESULT_LESSON_NAME = "lessonId";
+    public static String RESULT_CATEGORY_NAME = "categoryName";
+    public static String RESULT_SCORE = "score";
+
     public static final String DEFAULT_LESSON_NAME = "Training Project";
     public static final String KEY_LESSON_ID = "lessonId";
     public static final String KEY_WORDS_DATA = "wordsData";

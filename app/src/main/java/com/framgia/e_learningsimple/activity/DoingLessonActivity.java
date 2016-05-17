@@ -144,6 +144,7 @@ public class DoingLessonActivity extends FragmentActivity {
             super(context);
         }
 
+        @Override
         protected String doInBackground(String... args) {
             String authToken = args[0];
             String updateLessonUrl = String.format(UrlJson.UPDATE_LESSON_URl_FORMAT, String.valueOf(mLessonId));
@@ -160,6 +161,24 @@ public class DoingLessonActivity extends FragmentActivity {
                 e.printStackTrace();
             }
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            switch (mStatusCode) {
+                case ErrorNetwork.OK:
+                    Intent intent = new Intent(DoingLessonActivity.this, ResultActivity.class);
+                    intent.putExtra(JsonKeyConstant.KEY_USER_ANSWERS, mUserAnswers);
+                    intent.putExtra(JsonKeyConstant.KEY_LESSON_NAME, mLessonName);
+                    intent.putExtra(JsonKeyConstant.KEY_CATEGORY_NAME, mCategoryName);
+                    startActivity(intent);
+                    finish();
+                    break;
+                default:
+                    Toast.makeText(DoingLessonActivity.this, getString(R.string.error_cannot_save_result), Toast.LENGTH_SHORT).show();
+                    finish();
+            }
         }
     }
 }

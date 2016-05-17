@@ -2,6 +2,7 @@ package com.framgia.e_learningsimple.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -53,7 +54,8 @@ public class CategoryActivity extends Activity {
         mBtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(CategoryActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
     }

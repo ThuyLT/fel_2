@@ -37,7 +37,7 @@
                 <ImageView
                     android:layout_width="@dimen/layout_width"
                     android:layout_height="@dimen/layout_height"
-                    android:src="@mipmap/ic_email" />
+                    android:src="@mipmap/ic_email_blue" />
 
                 <TextView
                     android:id="@+id/text_email"
